@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Khushi Singh | Makeup Artist & Mehndi Designer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fff7f7;
+color:#2d1f1f;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(255,247,247,0.92),
+rgba(255,247,247,0.97)
+),
+url('mainphoto.jpg');
+
+background-size:contain;
+background-repeat:no-repeat;
+background-position:right bottom;
+
+z-index:-5;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(255,255,255,0.72);
+
+backdrop-filter:blur(18px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+color:#c26b7a;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#4a3232;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#c26b7a;
+}
+
+.book-btn{
+padding:13px 28px;
+border-radius:50px;
+
+background:
+linear-gradient(
+135deg,
+#d88a98,
+#b96b7c
+);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+box-shadow:
+0 10px 25px rgba(185,107,124,0.25);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:140px 8% 100px;
+}
+
+.hero-content{
+max-width:700px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero-tag{
+display:inline-block;
+padding:12px 24px;
+border-radius:40px;
+background:#ffe7ec;
+color:#b25b6d;
+font-weight:600;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:82px;
+line-height:1;
+margin-bottom:24px;
+font-weight:700;
+color:#2b1b1f;
+}
+
+.hero h1 span{
+color:#c26b7a;
+}
+
+.hero p{
+font-size:19px;
+line-height:1.9;
+color:#6f5a5a;
+margin-bottom:40px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.primary-btn{
+background:
+linear-gradient(
+135deg,
+#d88a98,
+#b96b7c
+);
+
+color:white;
+}
+
+.secondary-btn{
+border:2px solid #c26b7a;
+color:#c26b7a;
+}
+
+.btn:hover{
+transform:translateY(-6px);
+}
+
+/* SECTION */
+
+section{
+padding:110px 8%;
+}
+
+.section-title{
+font-size:54px;
+text-align:center;
+margin-bottom:70px;
+color:#2b1b1f;
+}
+
+.section-title span{
+color:#c26b7a;
+}
+
+/* GLASS */
+
+.glass{
+background:rgba(255,255,255,0.72);
+
+backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+border:1px solid rgba(0,0,0,0.05);
+
+box-shadow:
+0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* ABOUT */
+
+.about-box{
+padding:55px;
+text-align:center;
+}
+
+.about-box h3{
+font-size:42px;
+margin-bottom:20px;
+color:#b25b6d;
+}
+
+.about-box p{
+font-size:18px;
+line-height:2;
+color:#5b4b4b;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+}
+
+.service-card{
+padding:35px;
+border-radius:28px;
+transition:0.4s;
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-icon{
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:20px;
+font-size:30px;
+margin-bottom:22px;
+
+background:
+linear-gradient(
+135deg,
+#f8c8d1,
+#d88a98
+);
+
+color:white;
+}
+
+.service-card h3{
+font-size:28px;
+margin-bottom:14px;
+}
+
+.service-card p{
+line-height:1.8;
+color:#6f5a5a;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.gallery-grid img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:24px;
+transition:0.4s;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.gallery-grid img:hover{
+transform:scale(1.04);
+}
+
+/* CONTACT */
+
+.contact-box{
+padding:55px;
+text-align:center;
+}
+
+.contact-box h3{
+font-size:40px;
+margin-bottom:20px;
+color:#b25b6d;
+}
+
+.contact-box p{
+line-height:2;
+color:#5b4b4b;
+margin-bottom:30px;
+}
+
+.contact-info{
+display:grid;
+gap:18px;
+justify-content:center;
+}
+
+.contact-info div{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:18px;
+justify-content:center;
+}
+
+/* INSTAGRAM FLOAT */
+
+.instagram-btn{
+position:fixed;
+right:25px;
+bottom:25px;
+width:68px;
+height:68px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:
+linear-gradient(
+135deg,
+#833AB4,
+#FD1D1D,
+#FCAF45
+);
+
+color:white;
+
+font-size:32px;
+
+text-decoration:none;
+
+z-index:999;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+text-align:center;
+color:#7d6a6a;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+.bg{
+background-size:cover;
+opacity:0.15;
+}
+
+.hero h1{
+font-size:58px;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:18px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+padding-top:220px;
+}
+
+.hero h1{
+font-size:44px;
+}
+
+.section-title{
+font-size:40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+Khushi Singh
+</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#contact" class="book-btn">
+Book Now
+</a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-tag">
+MAKEUP ARTIST • MEHNDI DESIGNER
+</div>
+
+<h1>
+Beauty With <span>Creativity</span>
+</h1>
+
+<p>
+Professional makeup artist and mehndi designer from Bettiah, Bihar
+specializing in bridal makeup, party makeup, engagement looks,
+and elegant mehndi designs.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#gallery" class="btn primary-btn">
+<i class="fa-solid fa-image"></i>
+View Work
+</a>
+
+<a href="#contact" class="btn secondary-btn">
+<i class="fa-solid fa-phone"></i>
+Contact
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+About <span>Khushi</span>
+</h2>
+
+<div class="glass about-box">
+
+<h3>
+Passion For Makeup & Mehndi
+</h3>
+
+<p>
+Khushi Singh is a passionate makeup artist and mehndi designer with experience
+in bridal makeup, party makeup, engagement styling, and modern mehndi art.
+She focuses on elegant beauty looks and detailed mehndi creativity for every occasion.
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="section-title">
+My <span>Services</span>
+</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+</div>
+
+<h3>Bridal Makeup</h3>
+
+<p>
+Elegant bridal makeup looks with premium finishing and styling.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-heart"></i>
+</div>
+
+<h3>Party Makeup</h3>
+
+<p>
+Glamorous and trendy makeup for parties and events.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-hand-sparkles"></i>
+</div>
+
+<h3>Mehndi Design</h3>
+
+<p>
+Traditional and modern mehndi designs for every celebration.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="section-title">
+My <span>Gallery</span>
+</h2>
+
+<div class="gallery-grid">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact <span>Now</span>
+</h2>
+
+<div class="glass contact-box">
+
+<h3>
+Book Your Appointment
+</h3>
+
+<p>
+For bridal makeup, party makeup, or mehndi bookings,
+feel free to connect anytime.
+</p>
+
+<div class="contact-info">
+
+<div>
+<i class="fa-solid fa-phone"></i>
+<span>+91 9971671567</span>
+</div>
+
+<div>
+<i class="fa-solid fa-location-dot"></i>
+<span>Bettiah, Bihar, India</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INSTAGRAM BUTTON -->
+
+<a href="#"
+class="instagram-btn">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<footer>
+
+© 2026 Khushi Singh. All Rights Reserved.
+
+</footer>
+
+</body>
+
+</html>
